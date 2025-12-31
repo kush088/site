@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NS-3 Installation Guide</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+    <div class="nav-container">
+        <h2 class="logo">NS-3 Guide</h2>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+
+            <li><a href="#quick-links">Quick Links</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- ================= HEADER ================= -->
+<header id="home">
+    <h1>Install NS-3 on Ubuntu</h1>
+    <p>Complete step-by-step guide: VirtualBox → Ubuntu → NS-3</p>
+</header>
+
+<!-- ================= MAIN CONTENT ================= -->
+<main class="container">
+
+<!-- ================= ABOUT ================= -->
+
+<!-- ================= STEP 0 ================= -->
+<section class="section" id="virtualbox">
+    <h2>Step 1: Install VirtualBox</h2>
+
+    <p>VirtualBox allows you to run Ubuntu inside your computer safely.</p>
+
+    <h3>Download VirtualBox</h3>
+    <ol>
+        <li>Open your web browser</li>
+        <li>
+            Visit the official website:
+            <a href="https://www.virtualbox.org" target="_blank">
+                https://www.virtualbox.org
+            </a>
+        </li>
+        <li>Click <strong>Downloads</strong></li>
+        <li>Download VirtualBox for Windows</li>
+        <li>Download Extension Pack (7.2.2) or etc</li>
+    </ol>
+
+    <!-- Screenshot -->
+    <div class="screenshot-box">
+        <img class="img" src="images/virtualboxsite.png" alt="VirtualBox download page">
+
+        
+    </div>
+
+    <h3>Install VirtualBox</h3>
+    <ol>
+        <li>Open the installer</li>
+        <li>Click <strong>Next</strong> on all screens</li>
+        <li>Click <strong>Install</strong></li>
+        <img class="img" src="images/virtualbox.png" alt="VirtualBox download page">
+    </ol>
+</section>
+
+<!-- ================= STEP 1 ================= -->
+<section class="section" id="ubuntu">
+    <h2>Step 2: Install Ubuntu in VirtualBox</h2>
+
+    <p>Ubuntu is required because NS-3 works best on Linux.</p>
+
+    <h3>Download Ubuntu ISO</h3>
+    <ol>
+        <li>Visit the official Ubuntu website</li>
+        <li>Download Intel or AMD 64-bit architecture ISO</li>
+        <a href="https://ubuntu.com/download/desktop" target="_blank">
+                https://ubuntu.com/download/desktop
+            </a>
+    
+
+    <img class="img" src="images/ubantu.png" alt="VirtualBox download page">
+        
+        <li>Open virtualbox and click on new button</li>
+        <li>Browse your ISO file and add to virtualbox</li>
+        <img class="img" src="images/ubentusetup.png    " alt="VirtualBox download page">
+    </ol>
+
+    <h3></h3>
+    <ul>
+        <li>RAM: 4 GB (depend on your Ram)</li>
+        <li>CPU: 2 cores (depend on your core)</li>
+        <li>Disk: 25 GB (depend on your storage)</li>
+    </ul>
+    <img class="img" src="images/ubantudashbord.png    " alt="VirtualBox download page">
+    
+</section>
+<!-- ================= STEP 1 ================= -->
+<section class="section" id="ubuntu">
+    <h2>Step 3: Install Ns3 in Ubantu </h2>
+    <p>first Download ns3 file and extract file </p>
+    <img class="img" src="images/ns3download.png    " alt="VirtualBox download page">
+    <a href="https://www.nsnam.org/releases/ns-3-30/download/"></a>
+    <p>Now change directory in terminal using cd </p>
+    
+
+    <h3>Step 3.1: Update Ubuntu</h3>
+    <p>First, update your Ubuntu system to avoid installation errors.</p>
+    <p>Use command:-</p>
+    <pre>
+sudo apt update
+sudo apt upgrade -y
+    </pre>
+
+    <ol>
+        <img class="img" src="images/ns3-1.png" alt="VirtualBox download page">
+        
+    <h3>Step 3.2: Install Dependencies</h3>
+    <p>Install all required packages needed to build and run NS-3.</p>
+    <pre>
+sudo apt install gcc g++ python3 python3-dev cmake git wget \
+qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools \
+libsqlite3-dev libxml2-dev libgtk-3-dev -y
+    </pre>
+    <img class="img" src="images/ns3-2.png" alt="VirtualBox download page">
+    <h3>Step 3.3: Download & Build NS-3</h3>
+    <p>Download NS-3 from the official website and build it.</p>
+    <a href="https://www.nsnam.org/"></a>
+    <pre>
+Download ns3 file from 
+cd ns3
+cd ns-allinone-3.41/ns-3.41
+./ns3 configure --enable-examples --enable-tests
+./ns3 build
+    </pre>
+    <img class="img" src="images/ns3-3.png" alt="VirtualBox download page">
+    
+</section>
+
+
+
+
+<!-- ================= CONCLUSION ================= -->
+
+
+<!-- ================= QUICK LINKS ================= -->
+<section class="section" id="quick-links">
+    <h2>Quick Links</h2>
+    <ul>
+        <li><a href=" https://www.virtualbox.org">Install VirtualBox</a></li>
+        <li><a href="https://ubuntu.com/download/desktop">Install Ubuntu</a></li>
+        <li><a href="https://www.nsnam.org/releases/ns-3-30/download/">Install NS-3</a></li>
+    </ul>
+</section>
+
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <p>© 2025 | NS-3 Installation Guide | Beginner Friendly</p>
+</footer>
+
+<!-- JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>
